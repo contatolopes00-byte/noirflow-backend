@@ -7,7 +7,7 @@ from flask import Flask, redirect, request
 
 app = Flask(__name__)
 
-CLIENT_KEY = os.environ.get("TIKTOK_CLIENT_KEY")
+CLIENT_KEY = os.environ.get("TIKTOK_CLIENT_KEY", "").strip()
 CLIENT_SECRET = os.environ.get("TIKTOK_CLIENT_SECRET")
 
 REDIRECT_URI = "https://noirflow-backend.onrender.com/auth/callback/"

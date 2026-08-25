@@ -10,6 +10,9 @@ app = Flask(__name__)
 CLIENT_KEY = os.environ.get("TIKTOK_CLIENT_KEY", "").strip()
 CLIENT_SECRET = os.environ.get("TIKTOK_CLIENT_SECRET")
 
+print("CLIENT_KEY carregada:", bool(CLIENT_KEY))
+print("CLIENT_KEY tamanho:", len(CLIENT_KEY))
+
 REDIRECT_URI = "https://noirflow-backend.onrender.com/auth/callback/"
 
 TIKTOK_AUTHORIZE_URL = "https://www.tiktok.com/v2/auth/authorize/"
